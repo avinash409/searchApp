@@ -1,0 +1,58 @@
+<!-- deviceComponent.html -->
+
+<div class="device-pod">
+	<div class="device-pod-brand" ng-bind-html="devicedetails.brand | html"></div>
+	<div class="device-pod-title"><a ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}" ng-bind-html="devicedetails.displayName | html"></a></div>
+	<!-- <div class="device-pod-detailedtitle" ng-bind-html="updateddevice.title | html"></div> -->
+	<div class="rating">
+		<uib-rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" aria-labelledby="default-rating"></uib-rating>
+	    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+    </div>
+	<div class="device-spec-container">
+		<div class="dev-comp-left">
+			<img ng-src="http://ss7.vzw.com{{updateddevice.mediumImage}}"/>
+		</div>
+		<div class="dev-comp-right">
+			<div>
+				<h4>Payment Options</h4>
+				<div class="payment-options-select">
+					<p class="well well-sm" ng-if="(devicePrice.r0 && selectedpay[1])"><input name="price" ng-model="yrPrice2" type="radio" /> <b>${{devicePrice.r0}} one time payment ></b><br/>2 Yr Contract Required</p>
+					<p class="well well-sm" ng-if="(devicePrice.r1 && selectedpay[0])"><input name="price" ng-model="yrPrice1" type="radio" /> <b>${{devicePrice.r1}} one time payment ></b><br/>1 Yr Contract Required</p>
+					<p class="well well-sm" ng-if="(updateddevice.retailPrice)"><input name="price" ng-model="retailPrice" type="radio" /> <b>${{updateddevice.retailPrice}} one time payment ></b></p>
+				</div>
+				<!-- <p class="pay-option-promo">Save $25 a month on select plans when choosing device installment</p> -->
+			</div>
+			<div class="device-types">
+				<!-- <div class="device-qty">
+					Qty(1) <span class="glyphicon glyphicon glyphicon-menu-down"></span>
+				</div> -->
+
+				<div ng-if="updateddevice.colorName" uib-dropdown class="device-swatch device-color">
+		      		<span uib-dropdown-toggle>
+		        		{{updateddevice.colorName}} <span class="glyphicon glyphicon glyphicon-menu-down"></span>
+		      		</span>
+		    		<ul class="uib-dropdown-menu">
+		    			<li ng-repeat="color in devicedetails.color" ng-click="bindColor(color)">
+				      		<a ng-bind-html="color.name | html"></a>
+				    	</li>
+					</ul>
+				</div>
+
+				<div ng-if="updateddevice.capacity" uib-dropdown class="device-swatch device-color">
+		      		<span uib-dropdown-toggle>
+		        		{{updateddevice.capacity}} <span class="glyphicon glyphicon glyphicon-menu-down"></span>
+		      		</span>
+		    		<ul class="uib-dropdown-menu">
+		    			<li ng-repeat="capacity in devicedetails.capacity" ng-click="bindCapacity(capacity)">
+				      		<a ng-bind-html="capacity | html"></a>
+				    	</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="btn btn-danger btn-block btn-add-cart" ng-attr-id="dev-{{updateddevice.equipmentId}}">
+			<a ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}">Shop Now ></a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<div class="filters-template">
+	<button class="btn btn-danger btn-sm pull-right" ng-click="ClearFilter()">Clear Filters</button>
+	<div class="filter-payment">
+		<h4>{{devicefilters.pay_options_ss.facet}}</h4>
+
+		<div class="checkbox" ng-repeat="constraint in devicefilters.pay_options_ss.constraints">
+			<label><input type="checkbox" ng-checked="{{constraint.selected}}" name="{{constraint.key}}#{{$index}}" ng-model="pay_opt"> {{constraint.constraint}}</label>
+		</div>
+
+	</div>
+
+	<div class="filter-categories">
+		<h4>Categories</h4>
+		<div uib-dropdown>
+      		<div class="btn" uib-dropdown-toggle>
+        		{{activeCategory}} <span class="caret"></span>
+      		</div>
+    		<ul class="uib-dropdown-menu">
+    			<li class="filter-dropdown" ng-repeat="constraint in devicefilters.cat.constraints" ng-click="updateDropDown(constraint)">
+		  			<a>{{constraint.constraint}} <span class="badge">{{constraint.count}}</span></a>
+		  		</li>
+			</ul>
+		</div>
+
+	<div class="filters">
+		<div ng-if="(filter.widget=='menu_collapsed' && filter.facet!='Category')" ng-repeat="filter in devicefilters">
+			<div class="well-sm" ng-init="isCollapsed[$index] = true;" ng-click="isCollapsed[$index] = !isCollapsed[$index]">
+				{{filter.facet}}<span class="pull-right text-red-expand">+</span>
+			</div>
+			<div uib-collapse="isCollapsed[$index]">
+				<div class="checkbox" ng-repeat="constraint in filter.constraints">
+					<label><input type="checkbox" ng-checked="{{constraint.selected}}" ng-change="sendFacet(constraint,this)" ng-model="filter_opt"> {{constraint.constraint}} <span class="badge">{{constraint.count}}</span> </label>
+				</div>
+			</div>
+			<div ng-class="$index==$last?'':'partition'"></div>
+		</div>
+	</div>
+
+</div>

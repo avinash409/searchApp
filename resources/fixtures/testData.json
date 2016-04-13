@@ -1,0 +1,1267 @@
+{
+	"addToCartAccessoryEnabled": false,
+	"addToCartDeviceEnabled": true,
+	"commerceEligible": true,
+	"payOptions": [true, true, true, true],
+	"results": {
+		"total": 13,
+		"facets": {
+			"cat_group": {
+				"facet": "Sections",
+				"widget": "tab",
+				"constraints": [{
+					"constraint": "Shop",
+					"count": 13,
+					"enabled": true,
+					"key": "cat_group",
+					"selected": false,
+					"value": "shop"
+				}]
+			},
+			"pay_options_ss": {
+				"facet": "Payment Options",
+				"widget": "menu_expanded",
+				"constraints": [{
+					"constraint": "Device Payments",
+					"count": 5,
+					"enabled": true,
+					"key": "pay_options_ss",
+					"selected": true,
+					"value": "Device Payments"
+				}, {
+					"constraint": "2 Year Contract Pricing",
+					"count": 5,
+					"enabled": true,
+					"key": "pay_options_ss",
+					"selected": true,
+					"value": "2 Year Contract Pricing"
+				}, {
+					"constraint": "1 Year Contract Pricing",
+					"count": 5,
+					"enabled": true,
+					"key": "pay_options_ss",
+					"selected": true,
+					"value": "1 Year Contract Pricing"
+				}, {
+					"constraint": "Retail Pricing",
+					"count": 5,
+					"enabled": true,
+					"key": "pay_options_ss",
+					"selected": true,
+					"value": "Retail Pricing"
+				}]
+			},
+			"inventory_status_s": {
+				"facet": "Item Availability",
+				"widget": "menu_expanded_exclusive",
+				"constraints": [{
+					"constraint": "IN_STOCK",
+					"count": 5,
+					"enabled": true,
+					"key": "inventory_status_s",
+					"selected": false,
+					"value": "IN_STOCK"
+				}, {
+					"constraint": "OUT_OF_STOCK",
+					"count": 9,
+					"enabled": true,
+					"key": "inventory_status_s",
+					"selected": false,
+					"value": "OUT_OF_STOCK"
+				}]
+			},
+			"cat": {
+				"facet": "Category",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "Devices",
+					"count": 5,
+					"enabled": true,
+					"key": "cat",
+					"selected": false,
+					"value": "device"
+				}, {
+					"constraint": "Accessories",
+					"count": 8,
+					"enabled": true,
+					"key": "cat",
+					"selected": false,
+					"value": "accessory"
+				}]
+			},
+			"device_type_s": {
+				"facet": "Device Category",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "PDA/SmartPhones",
+					"count": 5,
+					"enabled": true,
+					"key": "device_type_s",
+					"selected": false,
+					"value": "PDA/SmartPhones"
+				}]
+			},
+			"acc_cat_s": {
+				"facet": "Accessory Category",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "Batteries",
+					"count": 1,
+					"enabled": true,
+					"key": "acc_cat_s",
+					"selected": false,
+					"value": "Batteries"
+				}, {
+					"constraint": "Belt Clips & Cases",
+					"count": 2,
+					"enabled": true,
+					"key": "acc_cat_s",
+					"selected": false,
+					"value": "Belt Clips & Cases"
+				}, {
+					"constraint": "Chargers & Cradles",
+					"count": 3,
+					"enabled": true,
+					"key": "acc_cat_s",
+					"selected": false,
+					"value": "Chargers & Cradles"
+				}, {
+					"constraint": "Data Products",
+					"count": 1,
+					"enabled": true,
+					"key": "acc_cat_s",
+					"selected": false,
+					"value": "Data Products"
+				}, {
+					"constraint": "Other",
+					"count": 1,
+					"enabled": true,
+					"key": "acc_cat_s",
+					"selected": false,
+					"value": "Other"
+				}]
+			},
+			"make_s": {
+				"facet": "Brand",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "Apple",
+					"count": 5,
+					"enabled": true,
+					"key": "make_s",
+					"selected": false,
+					"value": "Apple"
+				}]
+			},
+			"os_s": {
+				"facet": "OS",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "Apple iOS",
+					"count": 5,
+					"enabled": true,
+					"key": "os_s",
+					"selected": false,
+					"value": "Apple iOS"
+				}]
+			},
+			"color_s": {
+				"facet": "Color",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "Black",
+					"count": 2,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "Black"
+				}, {
+					"constraint": "Gold",
+					"count": 3,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "Gold"
+				}, {
+					"constraint": "Gray",
+					"count": 1,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "Gray"
+				}, {
+					"constraint": "Red",
+					"count": 2,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "Red"
+				}, {
+					"constraint": "Rose Gold",
+					"count": 2,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "Rose Gold"
+				}, {
+					"constraint": "Silver",
+					"count": 5,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "Silver"
+				}, {
+					"constraint": "Space Gray",
+					"count": 4,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "Space Gray"
+				}, {
+					"constraint": "White",
+					"count": 2,
+					"enabled": true,
+					"key": "color_s",
+					"selected": false,
+					"value": "White"
+				}]
+			},
+			"capacity_s": {
+				"facet": "Capacity",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "128 GB",
+					"count": 4,
+					"enabled": true,
+					"key": "capacity_s",
+					"selected": false,
+					"value": "128 GB"
+				}, {
+					"constraint": "16 GB",
+					"count": 5,
+					"enabled": true,
+					"key": "capacity_s",
+					"selected": false,
+					"value": "16 GB"
+				}, {
+					"constraint": "32 GB",
+					"count": 1,
+					"enabled": true,
+					"key": "capacity_s",
+					"selected": false,
+					"value": "32 GB"
+				}, {
+					"constraint": "64 GB",
+					"count": 4,
+					"enabled": true,
+					"key": "capacity_s",
+					"selected": false,
+					"value": "64 GB"
+				}]
+			},
+			"features_ss": {
+				"facet": "Key Features",
+				"widget": "menu_collapsed",
+				"constraints": [{
+					"constraint": "4G LTE Technology",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "4G LTE Technology"
+				}, {
+					"constraint": "Bluetooth",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Bluetooth"
+				}, {
+					"constraint": "Camera",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Camera"
+				}, {
+					"constraint": "Email",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Email"
+				}, {
+					"constraint": "HTML Web Browser",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "HTML Web Browser"
+				}, {
+					"constraint": "Mobile Broadband Capable",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Mobile Broadband Capable"
+				}, {
+					"constraint": "Mobile Hotspot",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Mobile Hotspot"
+				}, {
+					"constraint": "Music Player",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Music Player"
+				}, {
+					"constraint": "Push to Talk",
+					"count": 3,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Push to Talk"
+				}, {
+					"constraint": "Speakerphone",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Speakerphone"
+				}, {
+					"constraint": "Text Messaging",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Text Messaging"
+				}, {
+					"constraint": "VZ Navigator",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "VZ Navigator"
+				}, {
+					"constraint": "Video Messaging",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Video Messaging"
+				}, {
+					"constraint": "Visual Voice Mail",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Visual Voice Mail"
+				}, {
+					"constraint": "Voice Dialing",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Voice Dialing"
+				}, {
+					"constraint": "Wi-Fi",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "Wi-Fi"
+				}, {
+					"constraint": "World Device",
+					"count": 5,
+					"enabled": true,
+					"key": "features_ss",
+					"selected": false,
+					"value": "World Device"
+				}]
+			}
+		},
+		"records": [{
+			"brand": "Apple",
+			"capacity": ["128 GB", "64 GB", "16 GB"],
+			"color": [{
+				"hexCode": "#CFBEA9",
+				"name": "Gold"
+			}, {
+				"hexCode": "#EDCCBD",
+				"name": "Rose Gold"
+			}, {
+				"hexCode": "#d7d7d7",
+				"name": "Silver"
+			}, {
+				"hexCode": "#807F84",
+				"name": "Space Gray"
+			}],
+			"displayName": "iPhone 6s",
+			"docs": [{
+				"title": "Apple&reg; iPhone&reg; 6s 128GB in Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKT52LL/A",
+				"equipmentId": 9379,
+				"colorCode": "#CFBEA9",
+				"colorName": "Gold",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 16GB in Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKRW2LL/A",
+				"equipmentId": 9371,
+				"colorCode": "#CFBEA9",
+				"colorName": "Gold",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 64GB in Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKT12LL/A",
+				"equipmentId": 9375,
+				"colorCode": "#CFBEA9",
+				"colorName": "Gold",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 128GB in Rose Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKT62LL/A",
+				"equipmentId": 9380,
+				"colorCode": "#EDCCBD",
+				"colorName": "Rose Gold",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 16GB in Rose Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKRX2LL/A",
+				"equipmentId": 9374,
+				"colorCode": "#EDCCBD",
+				"colorName": "Rose Gold",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 64GB in Rose Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKT22LL/A",
+				"equipmentId": 9376,
+				"colorCode": "#EDCCBD",
+				"colorName": "Rose Gold",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 128GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKT42LL/A",
+				"equipmentId": 9381,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 16GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKRT2LL/A",
+				"equipmentId": 9373,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 64GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKT02LL/A",
+				"equipmentId": 9377,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 128GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKT32LL/A",
+				"equipmentId": 9382,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 16GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKRR2LL/A",
+				"equipmentId": 9372,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s 64GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKRY2LL/A",
+				"equipmentId": 9378,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}]
+		}, {
+			"brand": "Apple",
+			"capacity": ["128 GB", "64 GB", "16 GB"],
+			"color": [{
+				"hexCode": "#CFBEA9",
+				"name": "Gold"
+			}, {
+				"hexCode": "#EDCCBD",
+				"name": "Rose Gold"
+			}, {
+				"hexCode": "#d7d7d7",
+				"name": "Silver"
+			}, {
+				"hexCode": "#807F84",
+				"name": "Space Gray"
+			}],
+			"displayName": "iPhone 6s Plus",
+			"docs": [{
+				"title": "Apple&reg; iPhone&reg; 6s Plus 128GB Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKVH2LL/A",
+				"equipmentId": 9404,
+				"colorCode": "#CFBEA9",
+				"colorName": "Gold",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 949.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 16GB Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKV62LL/A",
+				"equipmentId": 9396,
+				"colorCode": "#CFBEA9",
+				"colorName": "Gold",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 64GB Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKVD2LL/A",
+				"equipmentId": 9400,
+				"colorCode": "#CFBEA9",
+				"colorName": "Gold",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 128GB Rose Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKVJ2LL/A",
+				"equipmentId": 9405,
+				"colorCode": "#EDCCBD",
+				"colorName": "Rose Gold",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 949.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 16GB Rose Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKV72LL/A",
+				"equipmentId": 9397,
+				"colorCode": "#EDCCBD",
+				"colorName": "Rose Gold",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 64GB Rose Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKVE2LL/A",
+				"equipmentId": 9401,
+				"colorCode": "#EDCCBD",
+				"colorName": "Rose Gold",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 128GB Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKVG2LL/A",
+				"equipmentId": 9406,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 949.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 16GB Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKV52LL/A",
+				"equipmentId": 9398,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 64GB Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKV92LL/A",
+				"equipmentId": 9402,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 128GB Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKVF2LL/A",
+				"equipmentId": 9407,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 949.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 16GB Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKV32LL/A",
+				"equipmentId": 9399,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6s Plus 64GB Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MKV82LL/A",
+				"equipmentId": 9403,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}]
+		}, {
+			"brand": "Apple&reg;",
+			"capacity": ["128 GB", "64 GB", "16 GB"],
+			"color": [{
+				"hexCode": "#CFBEA9",
+				"name": "Gold"
+			}, {
+				"hexCode": "#d7d7d7",
+				"name": "Silver"
+			}, {
+				"hexCode": "#807F84",
+				"name": "Space Gray"
+			}],
+			"displayName": "iPhone&reg; 6 Plus",
+			"docs": [{
+				"title": "Apple&reg; iPhone&reg; 6 Plus 128GB in Gold",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MGCQ2LL/A",
+				"equipmentId": 8502,
+				"colorCode": "#CFBEA9",
+				"colorName": "Gold",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.5881,
+				"totalReviews": 8329,
+				"preOrderDate": "2015-09-01T07:00:00Z",
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 Plus 128GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MGCP2LL/A",
+				"equipmentId": 8501,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.5881,
+				"totalReviews": 8329,
+				"retailPrice": 849.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 Plus 16GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MGCL2LL/A",
+				"equipmentId": 8497,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.5881,
+				"totalReviews": 8329,
+				"preOrderDate": "2015-08-31T07:00:00Z",
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 Plus 64GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MGCT2LL/A",
+				"equipmentId": 8518,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.5881,
+				"totalReviews": 8329,
+				"preOrderDate": "2015-08-31T07:00:00Z",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 Plus 16GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MGCK2LL/A",
+				"equipmentId": 8516,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.5881,
+				"totalReviews": 8329,
+				"preOrderDate": "2015-08-31T07:00:00Z",
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 Plus 64GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MGCR2LL/A",
+				"equipmentId": 8517,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.5881,
+				"totalReviews": 8329,
+				"preOrderDate": "2015-08-31T07:00:00Z",
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}]
+		}, {
+			"brand": "Apple&reg;",
+			"capacity": ["128 GB", "64 GB", "16 GB"],
+			"color": [{
+				"hexCode": "#d7d7d7",
+				"name": "Silver"
+			}, {
+				"hexCode": "#807F84",
+				"name": "Space Gray"
+			}],
+			"displayName": "iPhone&reg; 6",
+			"docs": [{
+				"title": "Apple&reg; iPhone&reg; 6 128GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MG612LL/A",
+				"equipmentId": 8496,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "128 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3782,
+				"totalReviews": 16948,
+				"retailPrice": 749.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 16GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MG5X2LL/A",
+				"equipmentId": 8493,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3782,
+				"totalReviews": 16948,
+				"retailPrice": 549.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 64GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MG642LL/A",
+				"equipmentId": 8514,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3782,
+				"totalReviews": 16948,
+				"preOrderDate": "2015-09-01T07:00:00Z",
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 16GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MG5W2LL/A",
+				"equipmentId": 8511,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3782,
+				"totalReviews": 16948,
+				"retailPrice": 549.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 6 64GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": true,
+				"webOnly": false,
+				"sku": "MG632LL/A",
+				"equipmentId": 8513,
+				"colorCode": "#807F84",
+				"colorName": "Space Gray",
+				"capacity": "64 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3782,
+				"totalReviews": 16948,
+				"retailPrice": 649.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}]
+		}, {
+			"brand": "Apple&reg;",
+			"capacity": ["32 GB", "16 GB"],
+			"color": [{
+				"hexCode": "#666666",
+				"name": "Gray"
+			}, {
+				"hexCode": "#d7d7d7",
+				"name": "Silver"
+			}],
+			"displayName": "iPhone&reg; 5s",
+			"docs": [{
+				"title": "Apple&reg; iPhone&reg; 5s 16GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": false,
+				"webOnly": true,
+				"sku": "ME342LL/A",
+				"equipmentId": 7243,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3959,
+				"totalReviews": 10988,
+				"retailPrice": 449.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 5s 16GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": false,
+				"webOnly": true,
+				"sku": "ME341LL/A",
+				"equipmentId": 7242,
+				"colorCode": "#666666",
+				"colorName": "Gray",
+				"capacity": "16 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3959,
+				"totalReviews": 10988,
+				"retailPrice": 449.99,
+				"inventoryStatus": "IN_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 5s 32GB in Silver",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "ME345LL/A",
+				"equipmentId": 7246,
+				"colorCode": "#d7d7d7",
+				"colorName": "Silver",
+				"capacity": "32 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3959,
+				"totalReviews": 10988,
+				"retailPrice": 499.99,
+				"inventoryStatus": "OUT_OF_STOCK",
+				"simId": 101
+			}, {
+				"title": "Apple&reg; iPhone&reg; 5s 32GB in Space Gray",
+				"cat": ["shop", "device"],
+				"tech4g": true,
+				"hdVoice": false,
+				"webOnly": true,
+				"sku": "ME344LL/A",
+				"equipmentId": 7245,
+				"colorCode": "#666666",
+				"colorName": "Gray",
+				"capacity": "32 GB",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.3959,
+				"totalReviews": 10988,
+				"retailPrice": 499.99,
+				"inventoryStatus": "OUT_OF_STOCK",
+				"simId": 101
+			}]
+		}, {
+			"brand": null,
+			"capacity": [],
+			"color": [{
+				"hexCode": "#000000",
+				"name": "Black"
+			}, {
+				"hexCode": "#ff0000",
+				"name": "Red"
+			}, {
+				"hexCode": "#FFFFFF",
+				"name": "White"
+			}],
+			"displayName": "mophie Juice Pack Air for iPhone 5",
+			"docs": [{
+				"cat": ["shop", "accessory"],
+				"title": "mophie Juice Pack Air for iPhone 5",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP5MOPHAIR",
+				"equipmentId": 3248158,
+				"colorCode": "#000000",
+				"colorName": "Black",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.2,
+				"totalReviews": 21,
+				"retailPrice": 39.98,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}, {
+				"cat": ["shop", "accessory"],
+				"title": "mophie Juice Pack Air for iPhone 5",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP5MOPHAIRRED",
+				"equipmentId": 4324507,
+				"colorCode": "#ff0000",
+				"colorName": "Red",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.2,
+				"totalReviews": 21,
+				"retailPrice": 39.98,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}, {
+				"cat": ["shop", "accessory"],
+				"title": "mophie Juice Pack Air for iPhone 5",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP5MOPHAIRWHT",
+				"equipmentId": 4324520,
+				"colorCode": "#FFFFFF",
+				"colorName": "White",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 4.2,
+				"totalReviews": 21,
+				"retailPrice": 39.98,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}]
+		}, {
+			"brand": null,
+			"capacity": [],
+			"color": [{
+				"hexCode": "#000000",
+				"name": "Black"
+			}, {
+				"hexCode": "#ff0000",
+				"name": "Red"
+			}, {
+				"hexCode": "#FFFFFF",
+				"name": "White"
+			}],
+			"displayName": "mophie Plus Charging Case for iPhone 5",
+			"docs": [{
+				"cat": ["shop", "accessory"],
+				"title": "mophie Plus Charging Case for iPhone 5",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP5MOPHPLUSBLK",
+				"equipmentId": 4835488,
+				"colorCode": "#000000",
+				"colorName": "Black",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 3.7,
+				"totalReviews": 3,
+				"retailPrice": 49.98,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}, {
+				"cat": ["shop", "accessory"],
+				"title": "mophie Plus Charging Case for iPhone 5",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP5MOPHPLUSRED",
+				"equipmentId": 4831143,
+				"colorCode": "#ff0000",
+				"colorName": "Red",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 3.7,
+				"totalReviews": 3,
+				"retailPrice": 49.98,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}, {
+				"cat": ["shop", "accessory"],
+				"title": "mophie Plus Charging Case for iPhone 5",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP5MOPHPLUSWHT",
+				"equipmentId": 4831368,
+				"colorCode": "#FFFFFF",
+				"colorName": "White",
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 3.7,
+				"totalReviews": 3,
+				"retailPrice": 49.98,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}]
+		}, {
+			"brand": null,
+			"capacity": [],
+			"color": [],
+			"displayName": "iPhone 4/4S Rugged OtterBox&reg; Defender Series&reg; Rugged Case",
+			"docs": [{
+				"cat": ["shop", "accessory"],
+				"title": "iPhone 4/4S Rugged OtterBox&reg; Defender Series&reg; Rugged Case",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP4WCAS2",
+				"equipmentId": 828072,
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 3.7,
+				"totalReviews": 70,
+				"retailPrice": 34.98,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}]
+		}, {
+			"brand": null,
+			"capacity": [],
+			"color": [],
+			"displayName": "iPhone 4/4S Incipio Double Covers - Silicone and Hard Cover - Black",
+			"docs": [{
+				"cat": ["shop", "accessory"],
+				"title": "iPhone 4/4S Incipio Double Covers - Silicone and Hard Cover - Black",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "AIP4IDCBLK",
+				"equipmentId": 813720,
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"avgRating": 2.7,
+				"totalReviews": 29,
+				"retailPrice": 24.99,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}]
+		}, {
+			"brand": null,
+			"capacity": [],
+			"color": [],
+			"displayName": "Belkin TruClear Invisiglass Screen Protector for iPhone 5/5s",
+			"docs": [{
+				"cat": ["shop", "accessory"],
+				"title": "Belkin TruClear Invisiglass Screen Protector for iPhone 5/5s",
+				"tech4g": false,
+				"hdVoice": false,
+				"webOnly": false,
+				"sku": "F8W355TTTL",
+				"equipmentId": 7462398,
+				"mediumImage": "/build/resources/images/IPHONE.png",
+				"retailPrice": 29.99,
+				"inventoryStatus": "OUT_OF_STOCK"
+			}]
+		}],
+		"ext": {
+			"priceReqSKUs": "MKT52LL/A,MKRW2LL/A,MKT12LL/A,MKT62LL/A,MKRX2LL/A,MKT22LL/A,MKT42LL/A,MKRT2LL/A,MKT02LL/A,MKT32LL/A,MKRR2LL/A,MKRY2LL/A,MKVH2LL/A,MKV62LL/A,MKVD2LL/A,MKVJ2LL/A,MKV72LL/A,MKVE2LL/A,MKVG2LL/A,MKV52LL/A,MKV92LL/A,MKVF2LL/A,MKV32LL/A,MKV82LL/A,MGCQ2LL/A,MGCP2LL/A,MGCL2LL/A,MGCT2LL/A,MGCK2LL/A,MGCR2LL/A,MG612LL/A,MG5X2LL/A,MG642LL/A,MG5W2LL/A,MG632LL/A,ME342LL/A,ME341LL/A,ME345LL/A,ME344LL/A"
+		}
+	},
+	"rows": 10,
+	"searchText": "iphone",
+	"total": 13,
+	"type": "SHOP"
+}

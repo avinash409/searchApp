@@ -1,0 +1,266 @@
+<!Doctype html>
+<html ng-app="searchApp" ng-controller="searchInitController">
+<head>
+	<title>search Application</title>
+	<link href="lib/bootstrap.css" rel="stylesheet"/>
+	<link href="search-page.css" rel="stylesheet"/>
+
+
+	<script type="text/javascript" src="lib/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="lib/angular.js"></script>
+	<script type="text/javascript" src="lib/angular-sanitize.js"></script>
+	<script type="text/javascript" src="lib/angular-route.js"></script>
+	<script type="text/javascript" src="lib/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="lib/ui-bootstrap-tpls.js"></script>
+
+
+	<script type="text/javascript" src="search-page.js"></script>
+</head>
+<body>
+    <div class="row">
+      <div class="bottom-border">
+        <div class="container">
+          <!-- Header begin -->
+          <header>
+            
+          </header>
+          <!-- Header end -->
+        </div>
+      </div>
+    </div>
+
+<div class="searchAppMain" ng-class="bodyClass">
+
+	<script type="text/ng-template" id="templates/pageNotFound.html">
+		<div class="centered-content">
+			<h1>Page not found</h1>
+			<p>Please check the URL and try again</p>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="templates/initApp.html"></script>
+
+	<script type="text/ng-template" id="templates/searchApp/landing.html"></script>
+
+	<script type="text/ng-template" id="templates/searchApp/filtersComponent.html">
+	<div class="filters-template">
+		<button class="vz_btn_primary pull-right" ng-click="ClearFilter()"><span style="padding: 0px 10px">Clear Filters</span></button>
+		<div class="filter-payment" ng-if="devicefilters.pay_options_ss">
+			<h4>{{devicefilters.pay_options_ss.facet}} </h4>
+			<div class="checkbox" ng-repeat="constraint in devicefilters.pay_options_ss.constraints" title="Contract term is applicable to devices only.">
+				<div ng-show="constraint.enabled"><input id="{{constraint.key | removeSpaces}}{{$index}}" type="checkbox" ng-checked="{{constraint.selected}} || pay_opt" ng-show="constraint.enabled" name="{{constraint.key}}#{{$index}}" ng-init="addTopayGroup(constraint)" ng-model="pay_opt" ng-change="payChange(constraint,pay_opt,$index)" ng-disabled="payGroup.length>1?false:validatePay(constraint,pay_opt)" > <label for="{{constraint.key | removeSpaces}}{{$index}}">{{constraint.constraint}}</label></div>
+			</div>
+		</div>
+
+		<div class="filter-categories">
+			<h4>Categories</h4>
+			<div toggle-class="open">
+				<div class="btn">
+					{{activeCategory}} <span class="caret"></span>
+				</div>
+				<ul class="custom-dropdown-menu">
+					<li class="filter-dropdown" ng-repeat="constraint in devicefilters.cat.constraints" ng-click="updateDropDown(constraint,this)">
+						<a>{{constraint.constraint}} <span class="badge">{{constraint.count}}</span></a>
+					</li>
+				</ul>
+			</div>
+
+		<div class="filters">
+			<div toggle-class="expand" ng-if="(devicefilters[fKey].widget=='menu_collapsed' && devicefilters[fKey].facet!='Category')" ng-repeat="fKey in devicefilters | keysOrder">
+				<div class="well-sm">
+					{{devicefilters[fKey].facet}}<span class="pull-right text-red-expand">+</span>
+					<span class="pull-right text-red-collapse">&ndash;</span>
+				</div>
+				<div class="filters-list">
+					<div class="checkbox" ng-repeat="constraint in devicefilters[fKey].constraints">
+						<div ng-if="!(devicefilters[fKey].facet=='Color')" ><input id="{{devicefilters[fKey].facet | removeSpaces}}{{$index}}" type="checkbox" ng-checked="{{constraint.selected}}" ng-change="sendFacet(constraint,filter_opt)" ng-model="filter_opt"> <label for="{{devicefilters[fKey].facet | removeSpaces}}{{$index}}"><span ng-bind-html="constraint.constraint | html"></span> <span class="badge">{{constraint.count}}</span></label>
+						</div>
+						<div ng-if="devicefilters[fKey].facet=='Color'"><input id="{{devicefilters[fKey].facet | removeSpaces}}{{$index}}" type="checkbox" ng-checked="{{constraint.selected}}" ng-change="sendFacet(constraint,filter_opt)" ng-model="filter_opt"> <label for="{{devicefilters[fKey].facet | removeSpaces}}{{$index}}"><div ng-attr-style="background-color:{{constraint.value}};display:inline-block;" class="color-box"></div> <span ng-bind-html="constraint.constraint | html"></span> <span class="badge">{{constraint.count}}</span> </label>
+						</div>
+					</div>
+				</div>
+				<div class="partition"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+	<script type="text/ng-template" id="templates/searchApp/deviceComponent.html">
+	<div class="device-pod">
+		<div ng-if="devicedetails.brand" class="device-pod-brand" ng-bind-html="devicedetails.brand | html"></div>
+		<div ng-if="!devicedetails.brand" style="height:16px;"></div>
+		<div ng-if="updateddevice.cat[1]=='device'" class="device-pod-title">
+			<a style="float:left" title="{{devicedetails.displayName}}" ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}{{contractTerm.priceQuery}}" ng-bind-html="devicedetails.displayName | html"></a>
+			<div class="starRatingSm" style="margin-left:10px;">
+				<div class="stars_{{rate}}"></div>
+			</div>
+		</div>
+		<div ng-if="updateddevice.cat[1]=='accessory'" class="device-pod-title">
+			<a title="{{devicedetails.displayName}}" ng-href="/b2b/commerce/amsecure/index.go?ssPath=ACC&isBundle=false&accessoryId={{updateddevice.equipmentId}}" ng-bind-html="devicedetails.displayName | html"></a>
+			<div style="float:right;margin-left:5px;" class="starRatingSm" style="margin-left:10px;">
+				<div class="stars_{{rate}}"></div>
+			</div>
+		</div>
+		<div ng-if="updateddevice.cat[1]=='bundle'" class="device-pod-title">
+			<a title="{{devicedetails.displayName}}" ng-href="/b2b/commerce/amsecure/index.go?ssPath=ACC&isBundle=true&accessoryId={{updateddevice.equipmentId}}" ng-bind-html="devicedetails.displayName | html"></a>
+			<div style="float:right;margin-left:5px;" class="starRatingSm" style="margin-left:10px;">
+				<div class="stars_{{rate}}"></div>
+			</div>
+		</div>
+		<!-- <div class="device-pod-detailedtitle" ng-bind-html="updateddevice.title | html"></div> -->
+		<!-- <div class="rating">
+			<rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" aria-labelledby="default-rating"></rating>
+			<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+		</div> -->
+
+		<div class="device-spec-container">
+			<div class="dev-comp-left">
+				<a ng-attr-title="{{updateddevice.title}}" ng-if="updateddevice.cat[1]=='device'" ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}{{contractTerm.priceQuery}}"><img ng-src="{{updateddevice.mediumImage}}" width="135px"/></a>
+				<a ng-attr-title="{{updateddevice.title}}" ng-if="updateddevice.cat[1]=='accessory'" ng-href="/b2b/commerce/amsecure/index.go?ssPath=ACC&isBundle=false&accessoryId={{updateddevice.equipmentId}}"><img ng-src="{{updateddevice.mediumImage}}" width="135px"/></a>
+				<a ng-attr-title="{{updateddevice.title}}" ng-if="updateddevice.cat[1]=='bundle'" ng-href="/b2b/commerce/amsecure/index.go?ssPath=ACC&isBundle=true&accessoryId={{updateddevice.equipmentId}}"><img ng-src="{{updateddevice.mediumImage}}" width="135px"/></a>
+
+				<div style="margin:5px 0 0 5px; width: 135px;">
+					<div style="float:left;margin:2px;" ng-class="{'lteBadgeSm': updateddevice.tech4g}"></div>
+					<div style="float:left;margin:2px;" ng-class="{'volteSm': updateddevice.hdVoice}"></div>
+					<div style="float:left;margin:2px;" ng-class="{'onlineExclBadgeSm': updateddevice.webOnly}"></div>
+					<div style="float:left;margin:2px;" ng-class="{'delayShippingBadge': (null!=updateddevice.backOrderDate)}"></div>
+					<div style="float:left;margin:2px;" ng-class="{'preOrderBadge': (null!=updateddevice.preOrderDate)}"></div>
+				</div>
+			</div>
+
+			<div style="margin-left:0px;" class="dev-comp-right">
+				<div>
+					<h3 ng-if="updateddevice.cat[1]=='device'">Payment Options</h3>
+					<div class="payment-options-select">
+						<div style="display:block;margin:0;"><p class="well well-sm" ng-if="(devicePrice.f2 >= 0 && selectedpay[1])"><input ng-model="contractTerm.price" id="{{updateddevice.sku}}_payOpt0" class="radioCustom" type="radio" value="2" /><label for="{{updateddevice.sku}}_payOpt0" class="radioCustom_label"><b ng-if="devicePrice.f2 > 0">{{devicePrice.f2 | currency }} one time payment ></b><b ng-if="devicePrice.f2 == 0">FREE</b><br/>2 Yr Contract Required</label></p></div>
+						<div style="display:block;margin:0;"><p class="well well-sm" ng-if="(devicePrice.f1 >= 0 && selectedpay[2])"><input ng-model="contractTerm.price" id="{{updateddevice.sku}}_payOpt1" class="radioCustom" type="radio" value="1" /> <label for="{{updateddevice.sku}}_payOpt1" class="radioCustom_label"><b ng-if="devicePrice.f1 > 0">{{devicePrice.f1 | currency }} one time payment ></b><b ng-if="devicePrice.f1 == 0">FREE</b><br/>1 Yr Contract Required</label></p></div>
+						<div style="display:block;margin:0;"><p class="well well-sm" ng-if="(updateddevice.retailPrice >= 0 && selectedpay[3] && updateddevice.cat[1]=='device')"><input ng-model="contractTerm.price"  id="{{updateddevice.sku}}_payOpt2" class="radioCustom" type="radio" value="0" /> <label for="{{updateddevice.sku}}_payOpt2" class="radioCustom_label"><b ng-if="updateddevice.retailPrice > 0">{{updateddevice.retailPrice | currency }} one time payment ></b><b ng-if="updateddevice.retailPrice == 0">FREE</b><br/>Retail Price</p>
+							<p class="well well-sm" ng-if="(updateddevice.retailPrice >= 0 && updateddevice.cat[1]=='accessory')" style="margin: 20px 0; padding: 5px 0;"><label for="{{updateddevice.sku}}_payOpt2" class="radioCustom_label"><b ng-if="updateddevice.retailPrice > 0">Retail Price: {{updateddevice.retailPrice | currency }}</b><b ng-if="updateddevice.retailPrice == 0">Retail Price: FREE</b></label></p></div>
+						<div style="display:block;margin:0;"><p class="well well-sm" ng-if="(devicePrice.mi >= 0 && selectedpay[0])"><input ng-model="contractTerm.price" class="radioCustom"  id="{{updateddevice.sku}}_payOpt3" type="radio" value="3" /> <label for="{{updateddevice.sku}}_payOpt3" class="radioCustom_label"><b ng-if="devicePrice.mi > 0">{{devicePrice.mi | currency }}/mo for 24 months ></b><b ng-if="devicePrice.mi == 0">FREE</b><br/>Retail Price: {{updateddevice.retailPrice | currency}}, 0% APR<br/><b ng-if="devicePrice.dp > 0">{{devicePrice.dp | currency}} DownPayment Required</b></label></p></div>
+					</div>
+					<!-- <p class="pay-option-promo">Save $25 a month on select plans when choosing device installment</p> -->
+				</div>
+				<div class="device-types">
+					
+
+					<!-- <div ng-if="updateddevice.colorName" class="device-swatch device-color" toggle-class="open" title="{{updateddevice.colorName}}">
+						<span>
+							<div class="swatch-color" ng-attr-style="display:inline-block;background-color:{{updateddevice.colorCode}};"></div> <span ng-if="devicedetails.color.length > 1" class="glyphicon glyphicon glyphicon-menu-down"></span>
+						</span>
+						<ul class="custom-dropdown-menu" ng-if="devicedetails.color.length > 1">
+							<li ng-repeat="color in devicedetails.color" ng-click="bindColor(color)">
+					-->
+								<!-- <a ng-bind-html="color.name | html"></a> -->
+					<!--		<a><div class="swatch-color" ng-attr-style="background-color:{{color.hexCode}};" title="{{color.name}}"></div></a>
+							</li>
+						</ul>
+					</div>-->
+
+					<div ng-if="updateddevice.colorName"><b>Color:</b> {{updateddevice.colorName}}</div>
+					<div ng-if="updateddevice.colorName" class="swatch-horizontal swatch-horizontal-color">
+							<div ng-class="swatch-box" ng-repeat="color in devicedetails.color" ng-click="bindColor(color)">
+								<a><div class="swatch-color swatch-big" ng-attr-style="background-color:{{color.hexCode}};" title="{{color.name}}"></div></a>
+							</div>
+					</div>
+					
+
+					<!-- <div ng-if="updateddevice.capacity" class="device-swatch device-capacity" toggle-class="open" title="{{updateddevice.capacity}}">
+						<span>
+							{{updateddevice.capacity}} <span ng-if="devicedetails.capacity.length > 1" class="glyphicon glyphicon glyphicon-menu-down"></span>
+						</span>
+						<ul class="custom-dropdown-menu" ng-if="devicedetails.capacity.length > 1">
+							<li ng-repeat="capacity in devicedetails.capacity" ng-click="bindCapacity(capacity)">
+								<a ng-bind-html="capacity | html" title="{{capacity}}"></a>
+							</li>
+						</ul>
+					</div>
+					-->
+
+					<div ng-if="updateddevice.capacity"><b>Capacity:</b> {{updateddevice.capacity}}</div>
+					<div ng-if="updateddevice.capacity" class="swatch-horizontal">
+						<div ng-class="swatch-box" ng-disabled="pod.cpdisabled" ng-repeat="capacity in devicedetails.capacity" ng-click="bindCapacity(capacity)">
+							<a><div class="swatch-big swatch-horizontal-capacity" ng-bind-html="capacity | html"  title="{{capacity}}"></div></a>
+						</div>
+					</div>
+
+					<div ng-if="(updateddevice.cat[1]=='device' && addtocartdevice) || (updateddevice.cat[1]=='accessory' && addtocartaccessory)" class="device-qty">
+						<!-- Qty(1) <span class="glyphicon glyphicon glyphicon-menu-down"></span> -->
+						<select ng-model="contractTerm.quantity">
+						<option value="1" label="1" title="1">1</option>
+					<c:if test="${!mbSearchBean.qtyRestricted}">
+						<option value="2" label="2" title="2">2</option>
+						<option value="3" label="3" title="3">3</option>
+						<option value="4" label="4" title="4">4</option>
+						<option value="5" label="5" title="5">5</option>
+						<option value="6" label="6" title="6">6</option>
+						<option value="7" label="7" title="7">7</option>
+						<option value="8" label="8" title="8">8</option>
+						<option value="9" label="9" title="9">9</option>
+						<option value="10" label="10" title="10">10</option>
+						<!-- <option value="More" label="More">More</option> -->
+					</c:if>
+						</select>
+					</div>
+
+				</div>
+				<button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='device' && addtocartdevice" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" ng-click="_hbLink('add to cart','add to cart');addToCart();" title="Add to cart >"><span><b>Add to cart</b><img class="caret_rebrand"></span>
+				</button>
+				<a ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}{{contractTerm.priceQuery}}" style="color: #fff; text-decoration: none" ><button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='device' && !addtocartdevice" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" title="Shop now >"><span><b>Shop now</b><img class="caret_rebrand"></span>
+				</button></a>
+				<button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='accessory' && addtocartaccessory" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}"  ng-click="_hbLink('add to cart','add to cart');addToCart();" title="Add to cart >"><span><b>Add to cart</b><img class="caret_rebrand"></span>
+				</button>
+				<a ng-href="/b2b/commerce/amsecure/index.go?ssPath=ACC&isBundle=false&accessoryId={{updateddevice.equipmentId}}" style="color: #fff; text-decoration: none"><button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='accessory' && !addtocartaccessory" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" title="Shop now >"><span><b>Shop now</b><img class="caret_rebrand"></span>
+				</button></a>
+				<div ng-if="updateddevice.inventoryStatus!='IN_STOCK'" class="well-sm text-center" title="Item out of stock"><img src="resources/images/out-of-stock.jpg" width="100px"/></div>
+			</div>
+		</div>
+	</div>
+</script>
+	
+	<div class="row" style="clear:both">
+		<div class="container1">
+		<div class="row">
+		<h1><b> Search Results: {{results.total}} found for - {{response.searchText}} </b></h1>
+		<uib-tabset>
+			<uib-tab id="shopTab" heading="Shop" ng-click="onTabClick('shop')" active="activeTabShop">
+				<div class="Shop">
+					<div class="col-xs-3">
+						<filter-component></filter-component>
+					</div>
+					<div class="col-xs-9">
+						<div class="row device-results">
+							<div class="results-tab" ng-repeat="group in results.records">
+								<device-component deviceprices=devicePrices selectedpay=selectedPay devicedetails=group></device-component>
+							</div>
+						</div>
+					</div>
+				</div>
+			</uib-tab>
+			<uib-tab id="supportTab" heading="Support" ng-click="onTabClick('support')" active="activeTabSupport">
+				<div class=support-results>
+					<div class="support-pod" ng-repeat="record in supportrecords">
+						<div class="support-spec-container">
+							<div class="support-comp-left">
+								<img ng-src=""/>
+							</div>
+							<div class="support-comp-right">
+								<div class="support-pod-title"><a ng-href="{{record.url}}" ng-bind-html="record.title | html"></a></div>
+								<div ng-bind-html="record.highlighting.content[0] | html"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</uib-tab>
+		</uib-tabset>
+	</div>
+			<div ng-view></div>
+		</div>
+
+		<div class="text-center search-overlay" id="loader" style="display:none;">
+			<img width="50px" ng-src='resources/fixtures/testData.json'/>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

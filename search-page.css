@@ -1,0 +1,362 @@
+.radioCustom {
+    opacity: 0;
+    position: absolute
+}
+
+.radioCustom,
+.radioCustom_label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+.radioCustom_label {
+    position: relative;
+    border: 0 solid transparent
+}
+
+.radioCustom_label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #888;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 6px
+}
+
+.radioCustom_label.m-textWrap:before {
+    float: left
+}
+
+.radioCustom_labelText {
+    float: left;
+    position: relative;
+    top: -21px;
+    left: 29px;
+    width: 98%
+}
+
+.radioCustom_labelText.m-heightFix {
+    height: 10px
+}
+
+.radioCustom.keyboard-navigation:focus+.radioCustom_label:before {
+    outline: #06C dotted 1px
+}
+
+.radioCustom:checked+.radioCustom_label:before,
+.radioCustom:checked+input[type=hidden]+.radioCustom_label:before {
+    background: #fff;
+    border: none;
+    box-shadow: inset 0 0 0 6px #cd040b
+}
+
+.radioCustom:checked+.deviceDetailsPricing_label h4 {
+    color: #000
+}
+
+.searchAppMain .nav.nav-tabs{
+  margin:10px 0;
+}
+
+.swatch-color {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 4px 0px -2px 8px;
+  border: 1px solid #d4d5d6;
+}
+
+.open>.custom-dropdown-menu {
+    display: block;
+}
+
+.custom-dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 0;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.custom-dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.custom-dropdown-menu>li>a:focus, .custom-dropdown-menu>li>a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+
+/* Styles go here */
+
+/* line 1, ../sass/searchPage.scss */
+ul.main-menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* line 6, ../sass/searchPage.scss */
+.voffset-6 {
+  margin-top: 5%;
+}
+
+/* line 10, ../sass/searchPage.scss */
+.row {
+  margin-left: 0px;
+  margin-right: 15px;
+}
+
+/* line 15, ../sass/searchPage.scss */
+.results-tab {
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 350px;
+}
+
+/* line 25, ../sass/searchPage.scss */
+.device-pod .device-pod-brand {
+  font-weight: bold;
+}
+/* line 29, ../sass/searchPage.scss */
+.device-pod .device-pod-title {
+  display: inline-table;
+  font-weight: bold;
+  color: #D43F3A;
+}
+/* line 35, ../sass/searchPage.scss */
+.device-pod .rating {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+/* line 42, ../sass/searchPage.scss */
+.device-pod .payment-options-select p.well {
+  margin-bottom: 5px;
+  background-color: #e5e5e5;
+  border-radius: 0px;
+}
+/* line 49, ../sass/searchPage.scss */
+.device-pod .device-spec-container {
+  margin: 10px 0 0 0;
+}
+/* line 51, ../sass/searchPage.scss */
+.device-pod .device-spec-container > div {
+  float: left;
+}
+/* line 57, ../sass/searchPage.scss */
+.device-pod .device-types > div {
+  display: inline-block;
+  margin: 0 30px 0 0;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  padding: 2px;
+}
+/* line 63, ../sass/searchPage.scss */
+.device-pod .device-types > div .glyphicon {
+  color: #f00;
+}
+/* line 67, ../sass/searchPage.scss */
+.device-pod .device-types .device-swatch {
+  cursor: pointer;
+}
+/* line 72, ../sass/searchPage.scss */
+.device-pod .btn-add-cart {
+  margin-top: 10px;
+}
+/* line 76, ../sass/searchPage.scss */
+.device-pod .pay-option-promo {
+  width: 230px;
+}
+/* line 80, ../sass/searchPage.scss */
+.device-pod .option-dropdown {
+  padding: 0px;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  list-style: none;
+  z-index: 9999;
+}
+/* line 88, ../sass/searchPage.scss */
+.device-pod .option-dropdown li {
+  padding: 5px;
+}
+/* line 90, ../sass/searchPage.scss */
+.device-pod .option-dropdown li:hover {
+  background: #eee;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* line 102, ../sass/searchPage.scss */
+.filters-template .filter-dropdown {
+  padding: 0 0 0 5px;
+}
+/* line 104, ../sass/searchPage.scss */
+.filters-template .filter-dropdown:hover {
+  background: #eee;
+  cursor: pointer;
+  padding: 0;
+}
+/* line 111, ../sass/searchPage.scss */
+.filters-template .filters {
+  cursor: pointer;
+}
+/* line 112, ../sass/searchPage.scss */
+.filters-template .filters .checkbox {
+  margin-left: 10px;
+}
+/* line 118, ../sass/searchPage.scss */
+.filters-template .text-red-expand {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* line 124, ../sass/searchPage.scss */
+.filters-template .partition {
+  border-bottom: 1px solid #ccc;
+  border-radius: 0px;
+}
+
+/* line 130, ../sass/searchPage.scss */
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+  top: 0px;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+/* line 140, ../sass/searchPage.scss */
+.support-pod {
+  margin: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 146, ../sass/searchPage.scss */
+.support-comp-left, .support-comp-right {
+  display: inline-table;
+  max-width: 1000px;
+}
+
+/* line 151, ../sass/searchPage.scss */
+.support-pod-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+.searchAppMain .dropdown-menu{
+  min-width: 0;
+}
+
+.searchAppMain .device-swatch.device-color .dropdown-menu>li>a{
+  padding: 3px 10px 3px 2px;
+}
+
+.searchAppMain .device-swatch.device-color .custom-dropdown-menu>li>a{
+  padding: 3px 10px 3px 2px;
+}
+
+.filters-list{
+  display: none;
+}
+
+.expand .filters-list{
+  display: block;
+}
+
+.text-red-expand{
+  display: block;
+}
+
+.text-red-collapse{
+  display: none;
+}
+
+.expand .text-red-expand{
+  display: none;
+}
+
+.expand .text-red-collapse{
+  display: block;
+}
+
+.device-pod .btn-add-cart .caret_rebrand{
+    content: '';
+    top:-1px;
+ }
+
+ .color-box{
+    width: 16px;
+    height: 16px;
+ }
+
+
+.device-pod .device-types > div{
+  display: block;
+}
+ .device-pod .device-types > div.swatch-horizontal{
+    display: flex;
+ }
+
+
+.device-pod .device-types > div{
+  border-bottom-width: 0px;
+}
+
+ .swatch-horizontal .swatch-big{
+  margin: 4px 8px 0 0;
+ }
+
+ .swatch-horizontal a, .swatch-horizontal a:hover{
+  text-decoration:none;
+ }
+
+
+.device-pod .device-types .swatch-horizontal-capacity{
+  border:1px solid #ccc;
+  background-color:#DDD;
+  color:#000;
+  cursor: pointer;
+  padding:2px;
+  margin: 4px 8px 0 0;
+ }
+ 
+
+ .row{
+  margin-left:15px;
+  margin-right:15px;
+ }

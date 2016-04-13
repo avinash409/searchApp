@@ -1,0 +1,36 @@
+<!-- resultsPage.html -->
+
+<div class="row">
+	<h1><b> Search Results: {{results.total}} found for - {{response.searchText}} </b></h1>
+	<uib-tabset>
+	    <uib-tab heading="Shop" ng-click="onTabClick('shop')" active="activeTabShop">
+		    <div class="Shop">
+				<div class="col-xs-4">
+					<filter-component></filter-component>
+				</div>
+				<div class="col-xs-8">
+					<div class="row device-results">
+						<div class="results-tab" ng-repeat="group in results.records">
+							<device-component deviceprices=devicePrices selectedpay=selectedPay devicedetails=group></device-component>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </uib-tab>
+	    <uib-tab heading="Support" ng-click="onTabClick('support')" active="activeTabSupport">
+			<div class="support-pod" ng-repeat="record in supportrecords">
+				<div class="support-spec-container">
+					<div class="support-comp-left">
+						<img ng-src="http://ss7.vzw.com/is/image/VerizonWireless/apple%2Diphone%2D6%2Dsilver?$device%2Dthumb$"/>
+					</div>
+					<div class="support-comp-right">
+						<div class="support-pod-title"><a ng-href="{{record.url}}" ng-bind-html="record.title | html"></a></div>
+						<div ng-bind-html="record.highlighting.content[0] | html"></div>
+					</div>
+				</div>
+			</div>
+	    </uib-tab>
+	</uib-tabset>
+</div>
+
+
