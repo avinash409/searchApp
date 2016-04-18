@@ -42,7 +42,7 @@
 
 	<script type="text/ng-template" id="templates/searchApp/landing.html"></script>
 
-	<script type="text/ng-template" id="templates/searchApp/filtersComponent.html">
+	<script type="text/ng-template" id="templates/searchApp/filterComponent.html">
 	<div class="filters-template">
 		<button class="vz_btn_primary pull-right" ng-click="ClearFilter()"><span style="padding: 0px 10px">Clear Filters</span></button>
 		<div class="filter-payment" ng-if="devicefilters.pay_options_ss">
@@ -203,13 +203,13 @@
 					</div>
 
 				</div>
-				<button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='device' && addtocartdevice" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" ng-click="_hbLink('add to cart','add to cart');addToCart();" title="Add to cart >"><span><b>Add to cart</b><img class="caret_rebrand"></span>
+				<button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='device' && addtocartdevice" class="btn btn-block btn-add-cart btn-danger vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" ng-click="_hbLink('add to cart','add to cart');addToCart();" title="Add to cart >"><span><b>Add to cart</b><img class="caret_rebrand"></span>
 				</button>
-				<a ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}{{contractTerm.priceQuery}}" style="color: #fff; text-decoration: none" ><button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='device' && !addtocartdevice" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" title="Shop now >"><span><b>Shop now</b><img class="caret_rebrand"></span>
+				<a ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}{{contractTerm.priceQuery}}" style="color: #fff; text-decoration: none" ><button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='device' && !addtocartdevice" class="btn btn-danger btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" title="Shop now >"><span><b>Shop now</b><img class="caret_rebrand"></span>
 				</button></a>
-				<button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='accessory' && addtocartaccessory" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}"  ng-click="_hbLink('add to cart','add to cart');addToCart();" title="Add to cart >"><span><b>Add to cart</b><img class="caret_rebrand"></span>
+				<button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='accessory' && addtocartaccessory" class="btn btn-block btn-danger btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}"  ng-click="_hbLink('add to cart','add to cart');addToCart();" title="Add to cart >"><span><b>Add to cart</b><img class="caret_rebrand"></span>
 				</button>
-				<a ng-href="/b2b/commerce/amsecure/index.go?ssPath=ACC&isBundle=false&accessoryId={{updateddevice.equipmentId}}" style="color: #fff; text-decoration: none"><button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='accessory' && !addtocartaccessory" class="btn btn-block btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" title="Shop now >"><span><b>Shop now</b><img class="caret_rebrand"></span>
+				<a ng-href="/b2b/commerce/amsecure/index.go?ssPath=ACC&isBundle=false&accessoryId={{updateddevice.equipmentId}}" style="color: #fff; text-decoration: none"><button ng-if="updateddevice.inventoryStatus=='IN_STOCK' && updateddevice.cat[1]=='accessory' && !addtocartaccessory" class="btn btn-block btn-danger btn-add-cart vz_btn_primary" ng-attr-id="dev-{{updateddevice.equipmentId}}" title="Shop now >"><span><b>Shop now</b><img class="caret_rebrand"></span>
 				</button></a>
 				<div ng-if="updateddevice.inventoryStatus!='IN_STOCK'" class="well-sm text-center" title="Item out of stock"><img src="resources/images/Out-of-stock.jpg" width="100px"/></div>
 			</div>
