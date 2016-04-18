@@ -1,5 +1,3 @@
-<!-- deviceComponent.html -->
-
 <div class="device-pod">
 	<div class="device-pod-brand" ng-bind-html="devicedetails.brand | html"></div>
 	<div class="device-pod-title"><a ng-href="/b2b/commerce/amsecure/index.go?ssPath=DEVICE&phoneId={{updateddevice.equipmentId}}" ng-bind-html="devicedetails.displayName | html"></a></div>
@@ -10,7 +8,7 @@
     </div>
 	<div class="device-spec-container">
 		<div class="dev-comp-left">
-			<img ng-src="resources/images/{{updateddevice.mediumImage}}"/>
+			<img ng-src="{{updateddevice.mediumImage}}"/>
 		</div>
 		<div class="dev-comp-right">
 			<div>
